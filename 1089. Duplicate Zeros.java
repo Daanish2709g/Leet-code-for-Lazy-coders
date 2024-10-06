@@ -24,7 +24,7 @@ Constraints:
 */
 
 
-// Approach 1 : 
+// Approach 1 : Brute force
 class Solution {
     public void duplicateZeros(int[] arr) {
         for (int i = 0; i < arr.length; i++){
@@ -39,6 +39,23 @@ class Solution {
     }
 }
 
-// Approach 2 : 
+// Approach 2 : best approach -Two Pointer approach : 
+/*Steps for the Two-Pointer Approach:
+Use two pointers (i and j):
 
+i: Points to the original array index we are reading from.
+j: Points to the new position where we need to write the elements, accounting for the 
+  duplicated zeros.
+Traverse the array from the left (i starting from 0).
+
+For each element:
+If the element is not zero, copy it to the jth position.
+If the element is zero, copy zero to both j and j + 1 (duplicating the zero).
+Increment j accordingly for non-zero or duplicated zero elements.
+Stop when j reaches the length of the array since you can't modify elements beyond the array's
+  fixed size.
+
+Key Idea:
+The second pointer j moves faster, as it accounts for the shifts caused by zero duplication.
+We process the array in a single pass, and there's no need for backward shifting.*/
 
