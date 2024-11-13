@@ -59,6 +59,17 @@ class Solution {
             return count;
             
         }
+
+        public static void main(String args[]) {
+		int nums [] = {1, 2, 3, 4, 5, 6, 2, 3, 4, 2};
+		int val = 2;
+		Solution obj = new Solution();
+		int newlen = obj.removeElement(nums, val);
+		System.out.println(newlen);
+	}
     
     
 }
+
+        
+    
